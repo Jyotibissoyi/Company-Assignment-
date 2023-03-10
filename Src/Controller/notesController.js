@@ -30,7 +30,7 @@ const createNote= async (req, res)=>{
 
 const fetchNote= async (req, res)=>{
     try {
-        const Data= req.params._id
+        const Data= req.params.id
 
         
         const fetchData= await Model.findOne({Data:Data, isDelete:false}).select({_id:1,title:1,content:1,createdAt:1});
@@ -45,7 +45,7 @@ const fetchNote= async (req, res)=>{
 
 const updateNote= async (req, res)=>{
     try {
-        const paramsData= req.params._id
+        const paramsData= req.params.id
         const bodyData= req.body
         const {title,content}=bodyData
 
@@ -65,7 +65,7 @@ const updateNote= async (req, res)=>{
 
 const deleteNote= async (req, res)=>{
     try {
-        const paramsData= req.params._id
+        const paramsData= req.params.id
 
         //const fetchData= await Model.findOne(Data);
 

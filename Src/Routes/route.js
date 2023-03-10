@@ -11,7 +11,7 @@ router.get('/getdata/:id',fetchNote)
 
 router.put('/update/:id', updateNote)
 
-router.put('/delete/:id', deleteNote)
+router.delete('/delete/:id', deleteNote)
 
 
 
